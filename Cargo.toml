@@ -1,0 +1,19 @@
+[package]
+name = "gfa-wrapper"
+version = "0.1.0"
+authors = ["Christos Chatzifountas <heefoo@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gfa = "0.10"
+bstr = "0.2"
+libc = "0.2.95"
+ffi-convert = "0.5.0"
+ffi-convert-derive = "0.1.2"
+
+[lib]
+name = "gfa_wrapper"
+crate-type = ["cdylib"]      # Creates dynamic lib
+# crate-type = ["staticlib"] # Creates static lib
