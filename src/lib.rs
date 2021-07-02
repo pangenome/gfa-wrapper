@@ -16,7 +16,7 @@ use ffi_convert::{CReprOf, CStringArray };
 
 
 #[no_mangle]
-pub extern "C" fn consume_gfs_file (pointer_path:  *const c_char )  -> CStringArray {
+pub extern "C" fn consume_gfa_file (pointer_path:  *const c_char )  -> CStringArray {
 
 
     let  gfa_path =  unsafe{ &CStr::from_ptr(pointer_path)};
@@ -43,7 +43,7 @@ pub extern "C" fn consume_gfs_file (pointer_path:  *const c_char )  -> CStringAr
 
 
 #[no_mangle]
-pub extern "C" fn consume_gfs_file_raw (pointer_path:  *const c_char, number_of_items: *mut c_int)  -> *const *const c_char   {
+pub extern "C" fn consume_gfa_file_raw (pointer_path:  *const c_char, number_of_items: *mut c_int)  -> *const *const c_char   {
 
 
     let  gfa_path =  unsafe { &CStr::from_ptr(pointer_path) };
